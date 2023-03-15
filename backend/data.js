@@ -1,6 +1,7 @@
 const data = {
   products: [
     {
+      _id: '1',
       name: 'Wooden Snuff Box',
       slug: 'Snuff box',
       category: 'Wood',
@@ -14,6 +15,7 @@ const data = {
       description: 'Wooden snuffbox with tools.',
     },
     {
+      _id: '2',
       name: 'Civil War Era Trunk',
       slug: 'Trunk',
       category: 'Wood',
@@ -28,6 +30,7 @@ const data = {
         'Wooden Civil Era round top trunk, good condition and no key.',
     },
     {
+      _id: '3',
       name: 'Pewter Hand Mirror',
       slug: 'Mirror',
       category: 'Metal',
@@ -42,6 +45,7 @@ const data = {
         'Handheld Antique Pewter Mirror, glass shows some wear as expected.',
     },
     {
+      _id: '4',
       name: 'Asian Snuff Bottle',
       slug: 'Snuff Bottle',
       category: 'Asian',
@@ -56,6 +60,7 @@ const data = {
         'Handmade with metal, camel bone, and wood.  Asian snuff bottle, has makers mark on bottom.',
     },
     {
+      _id: '5',
       name: 'Wood and Metal Icon',
       slug: 'Religious Icon',
       category: 'Religious',
@@ -69,6 +74,7 @@ const data = {
       description: 'Religious Icon from Italy, early 1920.',
     },
     {
+      _id: '6',
       name: 'Rug',
       slug: 'Rug',
       category: 'Textile',
@@ -83,6 +89,7 @@ const data = {
     },
 
     {
+      _id: '7',
       name: 'Wood Clock',
       slug: 'WOOD Clock',
       category: 'Clock',
@@ -97,6 +104,7 @@ const data = {
         'English Mantle Clock, Turn of the century antique, work great.',
     },
     {
+      _id: '8',
       name: 'Asian Clock',
       slug: 'Asian Clock',
       category: 'Clock',
@@ -111,6 +119,7 @@ const data = {
         'Made in America, Asian inspired Quartz AA battery table top clock',
     },
     {
+      _id: '9',
       name: 'Rose Medallion Plate',
       slug: 'Plate',
       category: 'Asian',
@@ -125,6 +134,7 @@ const data = {
         'Hand painted Chinese Rose Medallion Decorative plate, makers mark on bottom.',
     },
     {
+      _id: '10',
       name: 'Rose Medallion Vase',
       slug: 'Vase',
       category: 'Asian',
@@ -139,6 +149,7 @@ const data = {
         'Hand painted Chinese Rose Medallion Decorative vase, makers mark on bottom.',
     },
     {
+      _id: '11',
       name: 'Metal Asian Horse',
       slug: 'Horse',
       category: 'Asian',
@@ -153,6 +164,7 @@ const data = {
         'Hand painted Chinese Rose Medallion Decorative plate, makers mark on bottom.',
     },
     {
+      _id: '12',
       name: 'Wood Bowl Branch',
       slug: 'Bowl',
       category: 'Wood',
@@ -167,6 +179,7 @@ const data = {
         'Hand Made decorative art piece, Mesquite wood hand turned by Mark Jackofsky.',
     },
     {
+      _id: '13',
       name: 'Asian Rice Container',
       slug: 'Container',
       category: 'Asian',
@@ -181,6 +194,7 @@ const data = {
         'Large Chinese hand painted wooden rice container, 1930 era.',
     },
     {
+      _id: '14',
       name: 'Pablo Picasso Print',
       slug: 'Art Print',
       category: 'Art',
@@ -194,6 +208,7 @@ const data = {
       description: 'Print by Pablo Picasso.',
     },
     {
+      _id: '15',
       name: 'Alice Sweede Painting',
       slug: 'Art Painting',
       category: 'Art',
@@ -207,6 +222,7 @@ const data = {
       description: 'Roses painting done by Alice Sweede.',
     },
     {
+      _id: '16',
       name: 'Granite Foot Stool',
       slug: 'Foot Stool',
       category: 'Asian',
@@ -220,6 +236,7 @@ const data = {
       description: 'Hand carved Chinese foot stool.',
     },
     {
+      _id: '17',
       name: 'Spiral Staircase',
       slug: 'Staircase',
       category: 'American',
