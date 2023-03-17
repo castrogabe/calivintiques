@@ -40,3 +40,27 @@
 2. Create CartScreen
 3. add app.get to server.js to fetch products by \_id
 4. Update index.js for React 18
+
+# Sixth Commit Signin and Cart pages
+
+1. Create Signin page
+2. Connect to MongoDB using Atlas (create account if you don't have one)
+3. Add .env to (backend)
+   add: JWT_SECRET = your secret word
+   add: MONGODB_URI = your mongo_db connection
+4. Update and install all dependencies in {}package.json needed in backend
+5. Signin to API
+6. read data.js to database (fix data.js, all lowercase)
+7. fix components > Product.js in frontend (Line 16)
+8. fis pages > Product.jd (Line 81)
+9. Comment out \_id's in data.js (backend)
+10. Add models folder > backend/models/productModel.js
+11. Add routes folder > backend/routes/productRoutes.js
+12. backend/routes/seedRoutes.js
+13. backend/routes/userRoutes.js
+14. backend/models/productModel.js
+15. backend/models/userModel.js
+16. backend/utils.js(root)
+17. update server.js
+18. add SigninScreen to App.js
+19. update Header.js for signin link
