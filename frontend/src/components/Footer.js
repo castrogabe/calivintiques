@@ -7,7 +7,7 @@ const Footer = () => {
     <footer>
       <Row>
         <Col md={4}>
-          Stay in touch
+          Connect with us
           <div className='socialIcon'>
             <ul className='list-unstyled'>
               <li>

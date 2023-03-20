@@ -64,3 +64,14 @@
 17. update server.js
 18. add SigninScreen to App.js
 19. update Header.js for signin link
+
+# Seventh Commit-Checkout
+
+1. CSS adjustments for Responsive logo in Navbar.Brand
+   left side use ClassName="me-auto" (Line 22)
+   CSS realignment by category
+2. Add toast notification to components > Product.js (Line 29-32)
+   app.js (Lines 11-12, 20)
+3. Jumbotron with react-typewriter-effect
+   add components > Jumbotron.js
+   add Jumbotron in Home.js (Lines 46-50)
