@@ -65,7 +65,7 @@
 18. add SigninScreen to App.js
 19. update Header.js for signin link
 
-# Seventh Commit-Checkout
+# Seventh Commit-CSS, Jumbotron
 
 1. CSS adjustments for Responsive logo in Navbar.Brand
    left side use ClassName="me-auto" (Line 22)
@@ -75,3 +75,13 @@
 3. Jumbotron with react-typewriter-effect
    add components > Jumbotron.js
    add Jumbotron in Home.js (Lines 46-50)
+
+# Eighth Commit-Checkout
+
+1. Create ShippingScreen and components/CheckoutSteps.js
+2. Create SignUpScreen and update backend/routes/userRoutes.js
+3. Create PaymentMethodScreen
+4. Create PlaceOrderScreen
+5. implement Place Order Action
+6. Create OrderScreen
+7. Pay Order By PayPal
