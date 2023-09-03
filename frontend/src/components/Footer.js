@@ -61,7 +61,7 @@ const Footer = () => {
 
       <Row>
         <Col className='text-center mt-3'>
-          &copy;{new Date().getFullYear()} ~ CALIVINTIQUES ~
+          ~ &copy;{new Date().getFullYear()} CALIVINTIQUES ~
         </Col>
       </Row>
     </footer>

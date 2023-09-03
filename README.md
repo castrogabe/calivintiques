@@ -76,12 +76,54 @@
    add components > Jumbotron.js
    add Jumbotron in Home.js (Lines 46-50)
 
-# Eighth Commit-Checkout
+# Eight Commit-Order History
 
-1. Create ShippingScreen and components/CheckoutSteps.js
-2. Create SignUpScreen and update backend/routes/userRoutes.js
-3. Create PaymentMethodScreen
-4. Create PlaceOrderScreen
-5. implement Place Order Action
-6. Create OrderScreen
-7. Pay Order By PayPal
+BACKEND
+folder: models > orderModel.js
+folder: routes > orderRoutes.js
+server.js > update
+utils.js > update
+
+FRONTEND
+folder: pages
+
+1. Create OrderScreen
+2. Create OrderHistoryScreen
+3. Create ShippingAddressScreen
+4. Create ProfileScreen
+
+folder: components
+
+1. Create Bottom header for categories.
+2. Create SideBar for categories (optional), Header1
+3. Create Categories for categories (optional), Header
+4. Create SearchScreen (optional).
+   components/Header.js without searchBar or sideBar
+   components/Header1.js with searchBar and sideBar (optional)
+5. Update App.js
+
+# Ninth Commit-Admin
+
+BACKEND
+folder: models > updated orderModel, productModel
+folder: routes > updated orderRoutes, productRoutes, userRoutes
+
+1. Added uploadRoutes
+   Modified server.js, utils.js
+
+FRONTEND
+folder: components > AdminRoute.js, protectedRoute.sj
+
+folder: pages >
+
+1. Modified Cart.js
+2. Create Dashboard.js
+3. Modified Order.js
+4. Create OrderList.js
+5. Create ProductEdit.js
+6. Create ProductList.js
+7. Create Search.js
+8. Create UserEdit.js
+9. Create UserList.js
+
+Modify > App.js, index.js, package.json
