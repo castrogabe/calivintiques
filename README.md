@@ -127,3 +127,45 @@ folder: pages >
 9. Create UserList.js
 
 Modify > App.js, index.js, package.json
+
+# Tenth Commit-Contact Page, Stripe, PayPal, Multiple Images
+
+. Create PayPal Account (sandbox)
+. Create Stripe Account (test account)
+. Create ContactPage update App.js
+. Rate and review products
+. Pagination on HomeScreen
+. Multiple Images on Product Page and Image Magnifier
+. Rename Product.js to ProductMag.js so it is less confusing with components: product.js
+
+BACKEND
+folder: models: productModel.js (Line 8), messageModels added
+folder: routes: messageRoutes added, orderRoutes.js, productRoutes added (13-222), stripeRoutes
+npm i stripe
+server.js > update
+
+FRONTEND
+npm i stripe, paypal
+folder: components > StripeCheckout.js added
+Header.js > update
+Footer.js > update
+App.js > update
+index.css > update
+
+folder: pages >
+
+1. Cart.js > update
+2. Added Contact.js
+3. Dashboard.js > update
+4. Home.js > update
+5. Added Messages.js
+6. Order.js > update
+7. OrderHistory.js > update
+8. OrderList.js > update
+9. PaymentMethod.js > update
+10. PlaceOrder.js > update
+11. ProductEdit.js > update
+12. ProductList.js > update
+13. ShippingAddress.js > update
+14. UserList.js > update
+15. Product > update multiple images carousel & react-image-magnify

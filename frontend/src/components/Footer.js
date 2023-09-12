@@ -15,6 +15,11 @@ const Footer = () => {
                   <i className='fab fa-facebook'></i> Facebook
                 </Link>
               </li>
+              <li>
+                <Link to='https://www.instagram.com/' className='instagramIcon'>
+                  <i className='fab fa-instagram'></i> Instagram
+                </Link>
+              </li>
 
               <li>
                 <Link
@@ -38,21 +43,23 @@ const Footer = () => {
                   <i className='fa fa-info'></i> About Us
                 </Link>
               </li>
-              <li>
-                <Link to='/gallery' className='email'>
-                  {' '}
-                  <i className='fa fa-info'></i> Antique Gallery
-                </Link>
-              </li>
             </ul>
           </div>
         </Col>
         <Col md={4}>
           Merchandise Questions
           <div className='socialIcon'>
-            <a href='mailto:' className='email'>
-              <i className='fa fa-envelope'></i> Contact Us
-            </a>
+            <ul className='list-unstyled'>
+              <Link to='/contact' className='email'>
+                {' '}
+                <i className='fa fa-envelope'></i> Contact Us
+              </Link>
+              <li>
+                <a href='mailto:calvintiques@gmail.com' className='email'>
+                  <i className='fa fa-envelope'></i> Email Me via gmail
+                </a>
+              </li>
+            </ul>
           </div>
         </Col>
       </Row>
