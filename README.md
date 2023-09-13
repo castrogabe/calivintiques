@@ -169,3 +169,30 @@ folder: pages >
 13. ShippingAddress.js > update
 14. UserList.js > update
 15. Product > update multiple images carousel & react-image-magnify
+
+# Eleventh Commit-ProductMag Lightbox, Options, nodemailer purchase receipt
+
+. Add Toast notifications to components > Product.js
+. Low Quantity Alert!
+. Optional vertical thumbnails for ProductMag.js or horizontal thumbnails for ProductMagRow.js
+. Add Lightbox and carousel for ProductMag.js
+. Add nodemailer for payment receipt
+
+BACKEND
+folder: routes
+orderRoutes > update
+
+config.js > update
+utils.js > update
+
+FRONTEND
+folder: components
+Product.js > updated
+
+folder: pages
+Home.js > updated
+ProductMag > updated
+ProductMagRow > added (optional use)
+Messages.js > updated
+
+index.css > updated
