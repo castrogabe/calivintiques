@@ -11,24 +11,26 @@ import ProtectedRoute from './components/ProtectedRoute';
 
 // ADMIN SCREENS
 import Dashboard from './pages/Dashboard';
-import ProductList from './pages/ProductList';
-import ProductEdit from './pages/ProductEdit';
-import OrderList from './pages/OrderList';
-import UserList from './pages/UserList';
-import UserEdit from './pages/UserEdit';
 import Messages from './pages/Messages';
+import OrderList from './pages/OrderList';
+import ProductEdit from './pages/ProductEdit';
+import ProductList from './pages/ProductList';
+import UserEdit from './pages/UserEdit';
+import UserList from './pages/UserList';
 
 // SCREENS
 import AboutUs from './pages/AboutUs';
 import Cart from './pages/Cart'; // step 1
 import Contact from './pages/Contact';
+import ForgetPassword from './pages/ForgetPassword';
 import Home from './pages/Home';
-import OrderHistory from './pages/OrderHistory';
 import Order from './pages/Order';
+import OrderHistory from './pages/OrderHistory';
 import PaymentMethod from './pages/PaymentMethod'; // step 3
 import PlaceOrder from './pages/PlaceOrder'; // step 4
 import ProductMag from './pages/ProductMag';
 import Profile from './pages/Profile';
+import ResetPassword from './pages/ResetPassword';
 import Search from './pages/Search';
 import ShippingAddress from './pages/ShippingAddress'; // step 2
 import Signin from './pages/Signin';
@@ -48,6 +50,8 @@ function App() {
           <Route path='/search' element={<Search />} />
           <Route path='/signin' element={<Signin />} />
           <Route path='/signup' element={<Signup />} />
+          <Route path='/forget-password' element={<ForgetPassword />} />
+          <Route path='/reset-password/:token' element={<ResetPassword />} />
           <Route
             path='/profile'
             element={

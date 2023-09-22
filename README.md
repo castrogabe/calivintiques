@@ -252,3 +252,22 @@ ProductList.js (Lines 10, 81-83, 160-170)
 ProductMag.js (Lines 26, 71-73, 173)
 UserEdit.js (Lines 10, 50-52, 101, 137)
 UserList.js (Lines 3, 11, 57-59, 112-120)
+
+# Fourteenth Commit-Modify Backend Utils.js, Password reset added
+
+BACKEND
+utils.js > update for date format (mm/dd/yyyy)
+
+folder: models
+userModel.js > updated
+
+folder: routes
+userRoutes > updated
+
+FRONTEND
+folder > pages
+Signin.js > updated
+ForgetPassword.js > added
+ResetPassword.js > added
+
+App.js > updated (ForgetPassword.js, ResetPassword.js)
