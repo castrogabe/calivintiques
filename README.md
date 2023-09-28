@@ -271,3 +271,9 @@ ForgetPassword.js > added
 ResetPassword.js > added
 
 App.js > updated (ForgetPassword.js, ResetPassword.js)
+
+# Fifteenth Commit-Fix Backend routes
+
+BACKEND
+folder: routes
+userRoutes > updated
