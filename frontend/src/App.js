@@ -19,7 +19,6 @@ import UserEdit from './pages/UserEdit';
 import UserList from './pages/UserList';
 
 // SCREENS
-import AboutUs from './pages/AboutUs';
 import Cart from './pages/Cart'; // step 1
 import Contact from './pages/Contact';
 import ForgetPassword from './pages/ForgetPassword';
@@ -43,7 +42,6 @@ function App() {
       <BottomHeader />
       <main className='mt-0'>
         <Routes>
-          <Route path='/about' element={<AboutUs />} />
           <Route path='/product/:slug' element={<ProductMag />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/contact' element={<Contact />} />

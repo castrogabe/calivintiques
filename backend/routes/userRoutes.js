@@ -97,11 +97,31 @@ userRouter.post(
 userRouter.post(
   '/signup',
   expressAsyncHandler(async (req, res) => {
+    const { name, email, password } = req.body;
+
+    // Password complexity requirements (example: minimum length, uppercase, lowercase, digit, and special character)
+    // At least one digit ((?=.*\d))
+    // At least one lowercase letter ((?=.*[a-z]))
+    // At least one uppercase letter ((?=.*[A-Z]))
+    // At least one special character ((?=.*[^a-zA-Z\d]))
+    // A minimum length of 8 characters (.{8,})
+    const passwordRegex =
+      /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z\d]).{8,}$/;
+
+    if (!passwordRegex.test(password)) {
+      return res
+        .status(400)
+        .send({ message: 'Password does not meet complexity requirements.' });
+    }
+
+    const hashedPassword = bcrypt.hashSync(password, 8);
+
     const newUser = new User({
-      name: req.body.name,
-      email: req.body.email,
-      password: bcrypt.hashSync(req.body.password),
+      name,
+      email,
+      password: hashedPassword,
     });
+
     const user = await newUser.save();
     res.send({
       _id: user._id,
@@ -156,7 +176,7 @@ userRouter.post(
 
     if (user) {
       const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, {
-        expiresIn: '3h',
+        expiresIn: '10m', // Change the expiration time to 10 minutes
       });
       user.resetToken = token;
       await user.save();
@@ -168,7 +188,7 @@ userRouter.post(
         to: `${user.name} <${user.email}>`,
         subject: `Reset Password`,
         html: ` 
-        <p>Please Click the following link to reset your password:</p> 
+        <p>Please Click the following link to reset your password, link expires in 10 minutes</p> 
         <a href="${baseUrl()}/reset-password/${token}"}>Reset Password</a>
         `,
       };
@@ -189,19 +209,34 @@ userRouter.post(
 userRouter.post(
   '/reset-password',
   expressAsyncHandler(async (req, res) => {
-    jwt.verify(req.body.token, process.env.JWT_SECRET, async (err, decode) => {
+    const { password, token } = req.body;
+
+    // Password complexity requirements (example: minimum length, uppercase, lowercase, digit, and special character)
+    // At least one digit ((?=.*\d))
+    // At least one lowercase letter ((?=.*[a-z]))
+    // At least one uppercase letter ((?=.*[A-Z]))
+    // At least one special character ((?=.*[^a-zA-Z\d]))
+    // A minimum length of 8 characters (.{8,})
+    const passwordRegex =
+      /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z\d]).{8,}$/;
+
+    if (!passwordRegex.test(password)) {
+      return res
+        .status(400)
+        .send({ message: 'Password does not meet complexity requirements.' });
+    }
+
+    jwt.verify(token, process.env.JWT_SECRET, async (err, decode) => {
       if (err) {
         res.status(401).send({ message: 'Invalid Token' });
       } else {
-        const user = await User.findOne({ resetToken: req.body.token });
+        const user = await User.findOne({ resetToken: token });
         if (user) {
-          if (req.body.password) {
-            user.password = bcrypt.hashSync(req.body.password, 8);
-            await user.save();
-            res.send({
-              message: 'Password reset successfully',
-            });
-          }
+          user.password = bcrypt.hashSync(password, 8);
+          await user.save();
+          res.send({
+            message: 'Password reset successfully',
+          });
         } else {
           res.status(404).send({ message: 'User not found' });
         }

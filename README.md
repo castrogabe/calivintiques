@@ -277,3 +277,17 @@ App.js > updated (ForgetPassword.js, ResetPassword.js)
 BACKEND
 folder: routes
 userRoutes > updated
+
+# Sixteenth Commit-Regex complexity for password
+
+BACKEND
+folder > routes
+userRoutes > updated
+
+FRONTEND
+folder > pages
+Signup.js > updated
+ResetPassword.js > updated
+AboutUs.js > removed / App.js / Header.js / Header.js / pages
+
+index.css > update image size in components > Product.js
