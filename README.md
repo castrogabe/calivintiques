@@ -291,3 +291,24 @@ ResetPassword.js > updated
 AboutUs.js > removed / App.js / Header.js / Header.js / pages
 
 index.css > update image size in components > Product.js
+
+# Seventeenth Commit-Tweaks
+
+BACKEND
+folder > routes
+orderRoutes.js > updated
+
+FRONTEND
+folder > components
+SkeletonProductMag.js > updated
+
+folder > pages
+ForgetPassword.js > updated
+ProductEdit.js > updated
+ProductMag.js > updated
+ResetPassword > updated
+Signin.js > updated
+UserEdit.js > updated
+UserList.js > updated
+
+# Eighteenth Commit-Images for data.js
