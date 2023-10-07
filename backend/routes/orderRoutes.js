@@ -144,9 +144,9 @@ orderRouter.put(
 
       // ***************** send purchase receipt email ***********************
       const emailContent = {
-        from: 'calvintiques.com',
+        from: 'calvintiques@gmail.com',
         to: customerEmail,
-        subject: 'PayPal Purchase Receipt from calvintiques', // email subject
+        subject: 'PayPal Purchase Receipt from calvintiques.com', // email subject
         html: purchaseDetails,
       };
 
@@ -191,7 +191,7 @@ orderRouter.put(
     const emailContent = {
       from: 'calvintiques@gmail.com',
       to: customerEmail,
-      subject: 'Shipping notification from calvintiques', // email subject
+      subject: 'Shipping notification from calvintiques.com', // email subject
       html: shippingDetails,
     };
 
