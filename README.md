@@ -312,3 +312,11 @@ UserEdit.js > updated
 UserList.js > updated
 
 # Eighteenth Commit-Images for data.js
+
+# Nineteenth Commit-React-Lazyload
+
+FRONTEND
+npm install react-lazyload
+
+folder > components
+Product.js > updated for Lazyloading images
