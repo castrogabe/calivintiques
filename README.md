@@ -326,3 +326,9 @@ Product.js > updated for Lazyloading images
 BACKEND
 .env.example > updated with correct newsecretword for jwt
 utils.js > updated with website: exoticwoodpen.com
+
+# Twenty First Commit Final Footer bug fix
+
+FRONTEND
+folder > components
+Footer.js > updated for potential security vulnerabilities
