@@ -332,3 +332,11 @@ utils.js > updated with website: exoticwoodpen.com
 FRONTEND
 folder > components
 Footer.js > updated for potential security vulnerabilities
+
+# Twenty Second Commit edit package.json for deployment, modify home.js
+
+FRONTEND
+folder: screens
+Home.js > updated for 6 columns
+
+create package.json for build script in root folder
