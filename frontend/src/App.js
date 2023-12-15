@@ -19,9 +19,11 @@ import UserEdit from './pages/UserEdit';
 import UserList from './pages/UserList';
 
 // SCREENS
+import AboutUs from './pages/AboutUs';
 import Cart from './pages/Cart'; // step 1
 import Contact from './pages/Contact';
 import ForgetPassword from './pages/ForgetPassword';
+import Gallery from './pages/Gallery';
 import Home from './pages/Home';
 import Order from './pages/Order';
 import OrderHistory from './pages/OrderHistory';
@@ -42,9 +44,11 @@ function App() {
       <BottomHeader />
       <main className='mt-0'>
         <Routes>
+          <Route path='/about' element={<AboutUs />} />
           <Route path='/product/:slug' element={<ProductMag />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/gallery' element={<Gallery />} />
           <Route path='/search' element={<Search />} />
           <Route path='/signin' element={<Signin />} />
           <Route path='/signup' element={<Signup />} />

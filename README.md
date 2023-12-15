@@ -340,3 +340,16 @@ folder: screens
 Home.js > updated for 6 columns
 
 create package.json for build script in root folder
+
+# Twenty Third Commit updated About and Gallery pages
+
+FRONTEND
+folder: pages
+About.js > updated
+Gallery.js > updated
+
+folder: components
+Footer.js > updated added Gallery
+
+App.js > updated
+index.css > updated

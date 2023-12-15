@@ -55,6 +55,12 @@ const Footer = () => {
                   <i className='fa fa-info'></i> About Us
                 </Link>
               </li>
+              <li>
+                <Link to='/gallery' className='email'>
+                  {' '}
+                  <i className='fa fa-info'></i> Antique Gallery
+                </Link>
+              </li>
             </ul>
           </div>
         </Col>
