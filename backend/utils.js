@@ -60,7 +60,7 @@ export const transporter = nodemailer.createTransport({
   secure: false, // set to true if using SSL/TLS
   auth: {
     user: 'calvintiques',
-    pass: 'xxxxxxxxxxxxxxxx', // actual password used in testing
+    pass: 'rxlzclbxbekopcjz', // actual password used in testing
   },
 });
 

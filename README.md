@@ -353,3 +353,19 @@ Footer.js > updated added Gallery
 
 App.js > updated
 index.css > updated
+
+# Twenty Fifth Commit update Contact functionality with nodemailer
+
+FRONTEND
+folder: pages
+Messages.js > updated to add Reply form to users email
+
+BACKEND
+folder: models
+messageModels.js > updated to the replyContent, replyEmail, replySentAt
+
+folder: routes
+messageRoutes.js > updated with the message reply using nodemailer
+
+config.js > updated
+.env.example > updated
