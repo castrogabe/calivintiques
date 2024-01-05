@@ -401,3 +401,9 @@ ProductMagRow.js > updated with contact us
 Profile.js > updated with className box
 
 index.css > updated for PayPal and Stripe, adjust font sizes
+
+# Twenty Seventh Commit update the AboutUs page
+
+FRONTEND
+folder: pages
+AboutUs.js > updated
