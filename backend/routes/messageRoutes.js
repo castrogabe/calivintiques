@@ -43,7 +43,7 @@ messageRouter.post('/contact', (req, res) => {
 });
 
 // Retrieve all messages
-messageRouter.get('/messages', (req, res) => {
+messageRouter.get('/', (req, res) => {
   Message.find()
     .then((foundMessages) => res.json(foundMessages))
     .catch((error) => {
@@ -54,7 +54,7 @@ messageRouter.get('/messages', (req, res) => {
 });
 
 // Delete a message
-messageRouter.delete('/messages', (req, res) => {
+messageRouter.delete('/', (req, res) => {
   const { update_time, fullName, email, subject, message } = req.body;
 
   Message.findOneAndDelete({ update_time, fullName, email, subject, message })
@@ -73,14 +73,14 @@ messageRouter.delete('/messages', (req, res) => {
 });
 
 // Send a reply to a message
-messageRouter.post('/messages/reply', async (req, res) => {
+messageRouter.post('/reply', async (req, res) => {
   const { email, subject, message, replyContent } = req.body; // Reply data from frontend
 
   try {
     // Perform necessary actions to send the reply using Nodemailer
     // Assuming you have access to the 'transporter' from your utility functions (utils.js)
     const emailContent = {
-      from: 'calivintiques@gmail.com', // Change this to your email address
+      from: 'calvintiques@gmail.com', // Change this to your email address
       to: email,
       subject: `Re: ${subject}`, // Append 'Re: ' to the original subject
       html: `
@@ -88,7 +88,7 @@ messageRouter.post('/messages/reply', async (req, res) => {
         <p><strong>Subject:</strong> ${subject}</p>
         <p><strong>Message Reply:</strong> ${message}</p>
         <p>Thank you,</p>
-        <p>calivintiques.com</p>
+        <p>calvintiques.com</p>
       `,
     };
 

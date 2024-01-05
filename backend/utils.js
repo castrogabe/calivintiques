@@ -97,6 +97,10 @@ export const payOrderEmailTemplate = (order) => {
           .join('\n')}
       </tbody>
       <tfoot>
+          <tr>
+          <td colspan="2"><strong>Payment Method:</strong></td>
+          <td align="right"><strong>${order.paymentMethod}</strong></td>
+        </tr>
         <tr>
           <td colspan="2">Total Quantity:</td>
           <td align="right"> ${totalQuantity}</td>
@@ -118,10 +122,6 @@ export const payOrderEmailTemplate = (order) => {
           <td align="right"><strong> $${order.totalPrice.toFixed(
             2
           )}</strong></td>
-        </tr>
-        <tr>
-          <td colspan="2">Payment Method:</td>
-          <td align="right">${order.paymentMethod}</td>
         </tr>
       </tfoot>
     </table>
@@ -189,6 +189,10 @@ export const shipOrderEmailTemplate = (order) => {
           .join('\n')}
       </tbody>
       <tfoot>
+          <tr>
+            <td colspan="2"><strong>Payment Method:</strong></td>
+            <td align="right"><strong>${order.paymentMethod}</strong></td>
+          </tr>
         <tr>
           <td colspan="2">Total Quantity:</td>
           <td align="right"> ${totalQuantity}</td>
@@ -210,10 +214,6 @@ export const shipOrderEmailTemplate = (order) => {
           <td align="right"><strong> $${order.totalPrice.toFixed(
             2
           )}</strong></td>
-        </tr>
-        <tr>
-          <td colspan="2">Payment Method:</td>
-          <td align="right">${order.paymentMethod}</td>
         </tr>
       </tfoot>
     </table>
