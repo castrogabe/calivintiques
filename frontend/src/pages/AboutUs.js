@@ -1,11 +1,15 @@
 import React from 'react';
 import { Row, Col, Card, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const About = () => {
   return (
     <>
       <div className='content'>
+        <Helmet>
+          <title>About Calvintiques</title>
+        </Helmet>
         <br />
         <Row>
           <Col md={12}>
@@ -91,7 +95,7 @@ const About = () => {
         <Row>
           <Col md={6}>
             <Card>
-              <Image src='/images/logo.png' alt='antiques' />
+              <Image src='/images/shop.png' alt='antiques' />
             </Card>
           </Col>
           <Col md={6}>
