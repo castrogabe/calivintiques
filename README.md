@@ -402,8 +402,14 @@ Profile.js > updated with className box
 
 index.css > updated for PayPal and Stripe, adjust font sizes
 
-# Twenty Seventh Commit update the AboutUs page
+# Twenty Seventh Commit update the AboutUs page, SEO, Admin Dropdown Dashboard Pills
 
 FRONTEND
+folder: public
+
+folder: components
+Header.js > updated admin section for orders and messages pill
+
+index.html > updated for SEO optimization
 folder: pages
 AboutUs.js > updated

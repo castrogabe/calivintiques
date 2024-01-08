@@ -20,8 +20,10 @@ function Header() {
     localStorage.removeItem('paymentMethod');
     window.location.href = '/signin';
   };
-  // const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
+
   const [categories, setCategories] = useState([]);
+  const [messagesCount, setMessagesCount] = useState(0);
+  const [summaryData, setSummaryData] = useState(0);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -34,6 +36,36 @@ function Header() {
     };
     fetchCategories();
   }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        if (userInfo && userInfo.token) {
+          const config = {
+            headers: {
+              Authorization: `Bearer ${userInfo.token}`,
+            },
+          };
+
+          // Fetch messages count
+          const messagesResponse = await axios.get('/api/messages');
+          setMessagesCount(messagesResponse.data.length);
+
+          // Fetch orders count
+          const summaryResponse = await axios.get(
+            '/api/orders/summary',
+            config
+          );
+          setSummaryData(summaryResponse.data.orders);
+        }
+      } catch (err) {
+        toast.error(getError(err));
+      }
+    };
+
+    fetchData();
+  }, [userInfo]);
+
   return (
     <>
       <ToastContainer position='bottom-center' limit={1} />
@@ -100,17 +132,37 @@ function Header() {
                   <LinkContainer to='/admin/dashboard'>
                     <NavDropdown.Item>Dashboard</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/admin/products'>
-                    <NavDropdown.Item>Products</NavDropdown.Item>
-                  </LinkContainer>
-                  <LinkContainer to='/admin/orders'>
-                    <NavDropdown.Item>Orders</NavDropdown.Item>
-                  </LinkContainer>
+
                   <LinkContainer to='/admin/users'>
                     <NavDropdown.Item>Users</NavDropdown.Item>
                   </LinkContainer>
+
+                  <LinkContainer to='/admin/products'>
+                    <NavDropdown.Item>Products</NavDropdown.Item>
+                  </LinkContainer>
+
+                  <LinkContainer to='/admin/orders'>
+                    <NavDropdown.Item>
+                      Orders{' '}
+                      {summaryData && summaryData[0] && (
+                        // if orders is greater than zero then display the success pill
+                        <Badge pill bg='success'>
+                          {summaryData[0].numOrders}
+                        </Badge>
+                      )}
+                    </NavDropdown.Item>
+                  </LinkContainer>
+
                   <LinkContainer to='/admin/messages'>
-                    <NavDropdown.Item>Messages</NavDropdown.Item>
+                    <NavDropdown.Item>
+                      Messages{' '}
+                      {messagesCount > 0 && (
+                        // if messages is greater than zero then display the success pill
+                        <Badge pill bg='success'>
+                          {messagesCount}
+                        </Badge>
+                      )}
+                    </NavDropdown.Item>
                   </LinkContainer>
                 </NavDropdown>
               )}
